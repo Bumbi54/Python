@@ -137,4 +137,4 @@ To transform list to dictionary use:
 
 Iterator exhaust themselves if used.
 
- A set contains an unordered collection of unique and immutable objects. 
+ A set contains an unordered collection of unique and immutable objects. .
