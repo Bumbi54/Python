@@ -1,0 +1,15 @@
+Whenever a Python program is called, Python will check, if there exists a compiled version with the .pyc suffix. This file has to be newer than the file with the .py suffix.
+If such a file exists, Python will load the byte code, which will speed up the start up time of the script.
+
+If a Python script is imported as a module, the byte code will be stored in the corresponding .pyc file.
+
+In this line of codes:
+  x = 5       #x is assigned value 5.
+  y = x       #y point to the same location as x
+  y = 6       #In new location y is assigned value 6 and x still have same value 5
+
+""//"" can be used as operator in numeric operations for floor division.
+"**" operator for exponentiation
+
+Styles of python code:
+  https://www.python.org/dev/peps/pep-0008/#constants
