@@ -13,3 +13,6 @@ In this line of codes:
 
 Styles of python code:
   https://www.python.org/dev/peps/pep-0008/#constants
+
+For connecting to remote servers, running commands on them and expecting results:
+  pexpect
