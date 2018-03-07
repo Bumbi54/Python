@@ -1,0 +1,19 @@
+For quickly opening classes:
+  ctrl + N
+    Type name of the class you want to open.
+
+Code completion:
+  ctrl + space
+  Double press "space" for completion with classes that are not imported.
+    If selected import will be automatically added.
+  Pres "Tab" to select current selection.
+    This will overwrite rest to the right.
+
+For search through entire project:
+  atl + F7
+
+For documentation:
+  ctrl + Q
+
+Jump to usage:
+  ctrl + B

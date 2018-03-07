@@ -1,0 +1,14 @@
+Imported with:
+  import sys
+
+Module provides information about Python Interpreter.:
+  For example version of python interpreter:
+    sys.version
+
+Can be used to give python script arguments when running it:
+  sys.argv
+    List that contains user arguments.
+    First element is name of the script.
+    Other elements follow order of the arguments with which script was started.
+      sys.argv[1] - first argument
+      sys.argv[2] - second argument

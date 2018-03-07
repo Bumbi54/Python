@@ -1,0 +1,55 @@
+Use of "*" in tuple and dictionary(unpacking generalization):
+  Function can be called with value of tuple elements as arguments:
+      Function foo(x, y) prints arguments. t = (1, 2) dict = {'x': 1, 'y' :2}
+      -foo(*t) -> 1, 2
+      -foo(**dict) -> 1, 2
+  Can be used for merging dictionaries:
+    -d = {**dict , **otherDict}
+      Result is new dictionary "d" with combined "keys" from other two (or more) dictionaries.
+        If merging dictionaries have conflict in keys the last value for that key is used (dictionary on the outmost left that has that key).
+    https://www.youtube.com/watch?v=Duexw08KaC8
+
+Enumerate:
+  Using enumerate we can iterate over list and also get index of each element.
+    -for i, a in enumerate(list) -> where "i" is an index and "a" is element of that list on that index.
+    https://www.saltycrane.com/blog/2008/04/how-to-use-pythons-enumerate-and-zip-to/
+
+Zip:
+  Zip takes any number of iterable elements and puts each iteration in tuple.
+  It stops when shortest iterable is exhausted.
+  It returns iterator of tuples - be careful it is an object
+  For example if we want to iterate over two lists.
+  https://www.saltycrane.com/blog/2008/04/how-to-use-pythons-enumerate-and-zip-to/
+
+Alternative to zip which is faster:
+  from itertools import izip
+  Only python2! Python3 build in "zip" behaves like "izip".
+
+Command-line frameworks:
+  optparse - not used any more
+  argparse - standard for the CLI in python
+  click - alternative to argparse
+    Easer to use but it doesn't have all the functions of "argparse".
+
+Command-line frameworks click:
+  -@click.command()
+    Initialize "click".
+  -@click.argument('location')
+    Add mandatory argument in variable name "location".
+  -@click.option('--api-key', '-a', help='your API key for the OpenWeatherMap API',)
+    Add optional argument in variable "api_key".
+
+Selenium and automation:
+  Browser are used in "headless browser" mode.
+    Automated control of web page.
+    Executed over command-line of network communication.
+    Execution of JavaScript is available.
+    https://en.wikipedia.org/wiki/Headless_browser
+
+Sorting dictionaries in python:
+  -sorted(dict)
+    Returns list of sorted keys.
+  -sorted(dict.items())
+    Returns list of tuples sorted by first element (key).
+  -sorted(dict.items(), key = lambda x : x[1])
+    Returns list of tuples sorted by second element (values in dictionary).

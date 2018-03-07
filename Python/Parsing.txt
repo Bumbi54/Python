@@ -1,0 +1,16 @@
+CSV -> dictionary:
+  import csv
+
+  template=self.fileAdapter.hasReceivedFile(timeout=1.0, requestId=reqid)
+
+  #get string output from file adapter
+  csvString = str(template.getLayer('FILE').get('content'))
+
+  #transform output string from file adapter into csv format - this will make it easier to transform it into dictionary
+  csvFormat = csv.DictReader(csvString.splitlines())
+
+  dict_list = []
+  for line in csvFormat:
+    dict_list.append(line)
+
+    https://overlaid.net/2016/02/04/convert-a-csv-to-a-dictionary-in-python/

@@ -1,0 +1,5 @@
+Python style guide
+(search the web for "PEP 8")
+
+New print from python 3.6:
+  print(f"The weather in {location} right now: {weather}.")

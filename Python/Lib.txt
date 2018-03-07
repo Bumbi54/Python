@@ -1,0 +1,13 @@
+import atexit
+  The atexit module defines a single function to register cleanup functions. Functions thus registered are automatically executed upon normal interpreter termination.
+  atexit runs these functions in the reverse order in which they were registered; if you register A, B, and C, at interpreter termination time they will be run in the order C, B, A.
+    -atexit.register("FUNCTION_NAME")
+    -atexit.register(Disconnect, serviceInstance)
+
+import operator
+  Efficient functions corresponding to the intrinsic operators of Python.
+    -x + y -> operator.add(x, y)
+  -itemgetter()
+    Fetch an item from object.
+      For example value from dictionary or indexed item from list.
+    https://docs.python.org/2/library/operator.html

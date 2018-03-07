@@ -1,0 +1,5 @@
+Write More Pythonic Code by Applying the Things You Already Know
+  https://dbader.org/blog/writing-pythonic-code
+
+Writing Python Command-Line Tools With Click
+  https://dbader.org/blog/python-commandline-tools-with-click
