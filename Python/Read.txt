@@ -3,3 +3,6 @@ Write More Pythonic Code by Applying the Things You Already Know
 
 Writing Python Command-Line Tools With Click
   https://dbader.org/blog/python-commandline-tools-with-click
+
+Practical Introduction to Web Scraping in Python
+  https://realpython.com/blog/python/python-web-scraping-practical-introduction/

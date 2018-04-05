@@ -14,3 +14,52 @@ CSV -> dictionary:
     dict_list.append(line)
 
     https://overlaid.net/2016/02/04/convert-a-csv-to-a-dictionary-in-python/
+
+Converting integer to hex with n leading zeros:
+  >>>"{0:#0{1}x}".format(42,6)
+  >>>'0x002a'
+  Explanation:
+    {   # Format identifier
+    0:  # first parameter
+    #   # use "0x" prefix
+    0   # fill with zeroes
+    {1} # to a length of n characters (including 0x), defined by the second parameter
+    x   # hexadecimal number, using lowercase letters for a-f
+    }   # End of format identifier
+  https://stackoverflow.com/questions/12638408/decorating-hex-function-to-pad-zeros
+
+Alternative to "pprint" for pretty print of dictionary use "json.dumps()":
+  print(json.dumps(myDictionary, indent=4, sort_keys=True))
+
+Formatting string:
+  1.) Using %s - old way
+      >>>"My phone" %s, % phoneNumber
+      There are other formats (%x for hex).
+      >>> 'Hey %(name)s, there is a 0x%(errno)x error!' % {"name": name, "errno": errno }
+  2.) "New style"
+      Using function format().
+      Without use of "%s".
+      >>>'My {name}' .format()
+      >>>'My {name} with error {errorn:x}' .format(name = name, errorn = errorn)
+  3.) Literal String Interpolation
+      From python 3.6.
+      >>>f'Hello, {name}!'
+      Expressions or operations can be used.
+      >>>f'My age is {currentYear - bornYear}'
+      https://docs.python.org/3/library/string.html#string-formatting
+      Behind the scenes it works like string adding
+        'My' + name + 'and my age'
+      Formats:
+        {errno:#x}
+      https://docs.python.org/3/reference/lexical_analysis.html#f-strings
+  4.) Template strings
+      from string import Template
+      First create template:
+        >>>t = Template('Hey, $name!')
+      Call template function to add value to variables:
+        >>>t.substitute(name = 'Ivan')
+      It doesn't support formats.
+        Variables needs to be casted.
+        t.substitute(name = hex(name))
+  General rule/advice:
+    If your format strings are user-supplied, use Template Strings to avoid security issues. Otherwise, use Literal String Interpolation if you’re on Python 3.6+, and “New Style” String Formatting if you’re not.

@@ -1,0 +1,47 @@
+When working with list, dictionaries or set put each element in new line and end this new line with comma.
+  mylist = [
+    'Snow',
+    'Rain',
+    'Sunny'
+      ]
+
+For opening files it is recommended to use "with" statement.
+  >>>with open("file.txt", 'r') as f:
+  It ensures that files are closed automatically afterwards.
+
+With "threading lock" "with" statement can be used:
+  >>>mylock = threading-Lock()
+  >>>with mylock:
+
+Python and underscore:
+  1. Single leading underscore
+    _var
+    Convection only.
+    It means variable or method is for internal use only (private).
+    When wildcard importing, variables and methods with leading underscore wont be imported.
+      Only if module defines "__all__".
+  2. Single trailing underscore
+     class_
+     By Convection only.
+     Use only naming variable with name that is already taken by keyword in python (class, def, syn).
+  3. Double leading underscore
+     Used by python interpreter.
+     Used in classes so there is no collision with names in subclasses.
+     Python interpreter rewrites name of such variable or methods (name mangling).
+     It protect variable from been overwritten.
+     Also called "dunders”.
+  4. Double leading and trailing underscore
+     "name mangling" is not used in this case.
+     Reserved for special use.
+     Usage is not recommended.
+  5. Single underscore
+      Convection only.
+      This is used as temporary variable in function that need to return something.
+      Users don't care about value in this variable.
+      For example in for loop when we don't care about looing element.
+
+
+
+
+Avoid wildcard import;
+  from modulename import *

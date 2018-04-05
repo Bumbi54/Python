@@ -1,0 +1,3 @@
+Exception:
+  raise AuthError('Must be admin to delete')
+  raise ValueError('Unknown product id')

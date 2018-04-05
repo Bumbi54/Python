@@ -53,3 +53,43 @@ Sorting dictionaries in python:
     Returns list of tuples sorted by first element (key).
   -sorted(dict.items(), key = lambda x : x[1])
     Returns list of tuples sorted by second element (values in dictionary).
+  -sorted(xs.items(), key=operator.itemgetter(1))
+    Using "itemgetter".
+
+When working with network resources it is best practise to use closing():
+  -with closing(get(url, stream=True))
+  This ensures that network resources are freed when exiting this block.
+
+Retrieve value in dictionary:
+  -get('key', default)
+    Using this function on dictionary return value from 'key' in dictionary. If this key doesn't exist it returns default.
+    Useful because it doesn't causes error and crash when getting value from dictionary for key that doesn't exist.
+
+Assert:
+  Debugging aid.
+  If correct nothing happens.
+  If failed "AssertionError" exception is raised.
+  It used for errors/problems we are not expecting
+  -assert_stmt ::= "assert" expression1 ["," expression2]
+    "expression1" is condition that is checked
+    "expression2" is optional error message
+  Don't use it to validate data.
+    It can be turned off when running python code.
+    Careful with tuples because they assert as true if not empty.
+
+For calling function in code periodically use "Schedule":
+  Call function every x minutey:
+    >>>schedule.every(10).minutes.do(myfunc)
+  Call function every day at x time:
+    >>>schedule.every().day.at('10:30').do(mytask)
+
+Adding elements of two list (elements with same index are added):
+  >>> map(add, list1, list2)
+  Or use numpy:
+    Make vector of each list and add two vector together.
+      >>>vector1 = np.array([1, 2, 3])
+      >>>vector2 = np.array([4, 5, 6])
+      >>>sum_vector = vector1 + vector2
+  Or with "zip":
+    [sum(x) for x in zip(list1, list2)]
+  https://stackoverflow.com/questions/18713321/element-wise-addition-of-2-lists

@@ -11,3 +11,7 @@ import operator
     Fetch an item from object.
       For example value from dictionary or indexed item from list.
     https://docs.python.org/2/library/operator.html
+
+import itertools
+
+import dis

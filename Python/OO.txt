@@ -1,0 +1,23 @@
+For creating class:
+  class NAME:
+
+Instantiate an object:
+  a = NameOfClass()
+
+Attributes don't need to be defined in class definition but can be defied on objects.
+  a.x = 5
+
+Definition of method is the almost same as that of functions, difference is that method needs to have parameter "self"
+  def name(self):
+    Name of "self" can be changed.
+    "self" is just a reference to an object on which it is been called to.
+  Method can be called on object reference:
+    a.methodName()
+  Method can be called on class in which case we pass object reference as parameter (it is "self" parameter in method definition):
+    Class.firstMethod(a)
+
+Context manager can be implemented in objects:
+    >>>__enter__
+    >>>__exit__
+    When Object enter with statement it executes __enter__ and when it leaves it executes __exit__
+    https://docs.python.org/3/reference/datamodel.html#context-managers
