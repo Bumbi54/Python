@@ -1,3 +1,0 @@
-Python can cast values in different vatiables types. For example to cast integer into float:
-	float(123)
-		-this is useful when doing arithmetic operation
