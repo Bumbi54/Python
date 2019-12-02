@@ -93,3 +93,6 @@ Adding elements of two list (elements with same index are added):
   Or with "zip":
     [sum(x) for x in zip(list1, list2)]
   https://stackoverflow.com/questions/18713321/element-wise-addition-of-2-lists
+  
+Do operation on all elements of a list:
+  >>>map(lambda x : math.trunc(int(x) / 3) - 2 ,listModuleMass)
